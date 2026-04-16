@@ -1,0 +1,23 @@
+/* Configuración Editorial Semana 2 */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Regla No-Line: Todo por tonos de fondo, nada de bordes sólidos */
+section, nav, footer {
+    border: none !important;
+}
+
+/* Sombras suaves como las del ZIP */
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(19, 66, 61, 0.08);
+}
+
+/* Efecto hover suave para inputs */
+input, textarea {
+    transition: all 0.3s ease;
+}

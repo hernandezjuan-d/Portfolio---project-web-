@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | The Editorial Narrative</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#13423d",
+                        secondary: "#466270",
+                        surface: "#f8f9fa",
+                        "surface-container-low": "#f3f4f5",
+                        accent: "#396660"
+                    }
+                }
+            }
+        }
+
+        function showSection(sectionId, btn) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.portfolio-section').forEach(s => s.classList.add('hidden'));
+            // Mostrar la seleccionada
+            document.getElementById(sectionId).classList.remove('hidden');
+            
+            // Actualizar estado activo de los botones del nav
+            document.querySelectorAll('.nav-link').forEach(l => {
+                l.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                l.classList.add('text-secondary');
+            });
+            if(btn) {
+                btn.classList.add('text-primary', 'border-b-2', 'border-primary');
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-[#191c1d] font-['Manrope'] min-h-screen flex flex-col">
+
+    <nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl h-20 flex items-center border-b border-black/5">
+        <div class="max-w-7xl mx-auto px-8 w-full flex justify-between items-center">
+            <div class="text-2xl font-black font-['Epilogue'] tracking-tighter text-primary uppercase">Portfolio</div>
+            <div class="hidden md:flex gap-10 font-bold text-[10px] uppercase tracking-[0.2em]">
+                <button onclick="showSection('home', this)" class="nav-link text-primary border-b-2 border-primary pb-1 transition-all">Home</button>
+                <button onclick="showSection('projects', this)" class="nav-link text-secondary hover:text-primary transition-all">Projects</button>
+                <button onclick="showSection('pets', this)" class="nav-link text-secondary hover:text-primary transition-all">Pets</button>
+                <button onclick="showSection('contact', this)" class="nav-link text-secondary hover:text-primary transition-all">Contact</button>
+            </div>
+            <button onclick="showSection('contact')" class="bg-primary text-white px-6 py-2.5 rounded-md font-bold text-[10px] uppercase tracking-widest hover:bg-accent transition-all">Get in Touch</button>
+        </div>
+    </nav>
+
+    <main class="pt-20 flex-grow">
+        
+        <div id="home" class="portfolio-section">
+            <section class="max-w-7xl mx-auto px-8 py-24 grid grid-cols-12 gap-12 items-center">
+                <div class="col-span-12 md:col-span-7 flex flex-col items-start">
+                    <h1 class="font-['Epilogue'] text-7xl md:text-[100px] font-black leading-[0.9] text-primary mb-10 tracking-tighter">
+                        Crafting digital <br><span class="text-accent italic font-light font-['Manrope']">experiences</span> with meticulous care.
+                    </h1>
+                    <p class="text-xl text-secondary max-w-md mb-12 leading-relaxed">
+                        An editorial-minded designer and developer focused on high-end interactions and structural storytelling.
+                    </p>
+                    <button onclick="showSection('projects')" class="inline-flex items-center gap-4 bg-primary text-white px-8 py-4 rounded-md font-bold hover:gap-6 transition-all uppercase tracking-widest text-xs">
+                        View Projects →
+                    </button>
+                </div>
+                <div class="col-span-12 md:col-span-5">
+                    <div class="aspect-[3/4] bg-surface-container-low rounded-lg overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800" class="w-full h-full object-cover" alt="Profile">
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-surface-container-low py-32 border-y border-black/5">
+                <div class="max-w-7xl mx-auto px-8 grid grid-cols-12 gap-12">
+                    <div class="col-span-12 md:col-span-4 flex flex-col gap-4">
+                        <h2 class="font-['Epilogue'] text-3xl text-primary font-black uppercase">Philosophy</h2>
+                        <div class="w-12 h-1 bg-primary"></div>
+                    </div>
+                    <div class="col-span-12 md:col-span-8 space-y-6">
+                        <p class="text-2xl leading-relaxed text-primary font-medium italic">
+                            "Design is not just how it looks; it's how it communicates. I believe in the power of negative space and the rhythm of typography."
+                        </p>
+                        <p class="text-secondary leading-loose">
+                            Bridging the gap between brand identity and technical execution, I curate digital journeys that feel as intentional as a printed monograph.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="projects" class="portfolio-section hidden max-w-7xl mx-auto px-8 py-24">
+            <h2 class="font-['Epilogue'] text-[10px] uppercase tracking-[0.4em] text-secondary mb-16 italic">Alphabetical Index</h2>
+            <div class="grid grid-cols-1 gap-y-4">
+                <div class="flex justify-between items-baseline border-b border-black/10 py-10 opacity-30">
+                    <span class="font-['Epilogue'] text-5xl md:text-7xl font-black text-primary uppercase tracking-tighter">Applications</span>
+                    <span class="text-xs font-bold text-secondary">A</span>
+                </div>
+                <button onclick="showSection('pets')" class="flex justify-between items-baseline border-b border-black/10 py-10 group hover:border-primary transition-all text-left">
+                    <span class="font-['Epilogue'] text-5xl md:text-7xl font-black text-primary group-hover:text-accent uppercase tracking-tighter">Pets Gallery</span>
+                    <span class="text-xs font-bold text-primary italic">P — View Section →</span>
+                </button>
+                <div class="flex justify-between items-baseline border-b border-black/10 py-10 opacity-30">
+                    <span class="font-['Epilogue'] text-5xl md:text-7xl font-black text-primary uppercase tracking-tighter">Web Design</span>
+                    <span class="text-xs font-bold text-secondary">W</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="pets" class="portfolio-section hidden max-w-7xl mx-auto px-8 py-24">
+            <div class="mb-20 flex flex-col items-start gap-4">
+                <h2 class="font-['Epilogue'] text-6xl md:text-8xl text-primary font-black tracking-tighter">Companions</h2>
+                <div class="w-32 h-1.5 bg-accent"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+                <article class="flex flex-col">
+                    <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-8 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=600" class="w-full h-full object-cover" alt="Luna">
+                    </div>
+                    <h3 class="font-['Epilogue'] text-4xl text-primary font-black uppercase tracking-tighter">Luna</h3>
+                    <p class="text-secondary text-lg mt-2 font-medium">A curious garden explorer with an eye for quiet corners.</p>
+                </article>
+                <article class="flex flex-col">
+                    <div class="aspect-[4/5] rounded-2xl overflow-hidden mb-8 shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=600" class="w-full h-full object-cover" alt="Max">
+                    </div>
+                    <h3 class="font-['Epilogue'] text-4xl text-primary font-black uppercase tracking-tighter">Max</h3>
+                    <p class="text-secondary text-lg mt-2 font-medium">Head of security and motivation.</p>
+                </article>
+            </div>
+        </div>
+
+        <div id="contact" class="portfolio-section hidden max-w-7xl mx-auto px-8 py-24">
+            <div class="grid grid-cols-12 gap-16 items-start">
+                <div class="col-span-12 md:col-span-5 flex flex-col gap-6">
+                    <h2 class="font-['Epilogue'] text-5xl text-primary font-black uppercase tracking-tighter">Get in touch</h2>
+                    <p class="text-secondary text-lg leading-relaxed">Available for freelance opportunities and artistic collaborations.</p>
+                    <div class="flex flex-col gap-2 mt-8">
+                        <p class="text-xs font-black uppercase tracking-widest text-primary underline underline-offset-8">hello@stitch-narrative.com</p>
+                    </div>
+                </div>
+                <form class="col-span-12 md:col-span-7 space-y-4 bg-surface-container-low p-10 rounded-xl">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" placeholder="Name" class="w-full p-4 bg-white border-none rounded shadow-sm focus:ring-2 focus:ring-primary outline-none text-sm">
+                        <input type="email" placeholder="Email" class="w-full p-4 bg-white border-none rounded shadow-sm focus:ring-2 focus:ring-primary outline-none text-sm">
+                    </div>
+                    <textarea placeholder="Message" rows="5" class="w-full p-4 bg-white border-none rounded shadow-sm focus:ring-2 focus:ring-primary outline-none text-sm"></textarea>
+                    <button class="bg-primary text-white w-full py-5 rounded font-bold uppercase tracking-widest text-[10px]">Send Briefing</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="py-12 border-t border-black/5 bg-white">
+        <div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-secondary">© 2026 Crafted with Intention</p>
+            <div class="flex gap-8">
+                <a href="#" class="text-[10px] font-black uppercase tracking-widest text-secondary hover:text-primary transition-colors">LinkedIn</a>
+                <a href="#" class="text-[10px] font-black uppercase tracking-widest text-secondary hover:text-primary transition-colors">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
