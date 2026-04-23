@@ -1,0 +1,75 @@
+/* TAREA 4: Optimización con Variables */
+:root {
+    --primary-color: #2c3e50; /* El azul oscuro de tu header */
+    --accent-color: #3498db;  /* Un azul más claro para enlaces */
+    --bg-color: #f4f4f4;      /* Gris muy claro para el fondo */
+    --white: #ffffff;
+    --text-color: #333;
+    --border-radius: 8px;
+}
+
+/* TAREA 3: Unidades Relativas y Reset */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Base para rem */
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* TAREA 3: Imágenes Responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; border-bottom: 2px solid var(--primary-color); padding-bottom: 10px; }
+p { font-size: 1.1rem; }
+
+/* Contenedor principal para que no se pegue a los bordes */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* TAREA 2: Media Queries */
+
+/* Tablets (Pantallas medianas) */
+@media (max-width: 1024px) {
+    .project-list {
+        grid-template-columns: 1fr 1fr; /* 2 columnas */
+    }
+    .pets-grid {
+        grid-template-columns: repeat(3, 1fr); /* Mantiene 3 si caben */
+    }
+}
+
+/* Móviles (Pantallas pequeñas) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr; /* 1 sola columna en celular */
+    }
+
+    .pets-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columnas en celular para mascotas */
+    }
+}
