@@ -14,14 +14,16 @@
 </head>
 
 <body>
-    <header>
-        <button id="menu-btn" aria-label="Open menu">☰</button>
-        <h1>John Willson</h1>
-        <img src="https://i.scdn.co/image/ab6761610000e5ebe42e3a0f2d453258f99b2338" alt="Profile photo" />
+    <header class="main-header">
+        <div class="logo_container">
+         <img src="https://i.scdn.co/image/ab6761610000e5ebe42e3a0f2d453258f99b2338" alt="Profile photo" />
+        <div class="logo-area">John Wilson</div>
+        </div>
+       
         <nav id="menu" class="hidden">
             <ul>
                 <li><a href="#about">About </a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="./src/views/pets.html">Pets</a></li>
             </ul>
@@ -29,56 +31,68 @@
     </header>
 
     <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                Hello! I'm John, a passionate web developer with a love for creating beautiful and functional websites.
-                With experience in HTML, CSS, and JavaScript, I enjoy bringing ideas to life on the web.
-                When I'm not coding, you can find me exploring new technologies or spending time with my pets.
-            </p>
+        <section id="about" class="hero-section">
+            <div class="text-title">
+            <h1 class="hero-title">John Wilson</h1>
+            <p class="hero-subtitle">
+            Architenting high-performance digital experiences through minimalist design and precise engineering</p>
+            </div>
             <!-- Image with alt text for week 3 -->
-            <img src="./public/img/https://i.scdn.co/image/ab6761610000e5ebe42e3a0f2d453258f99b2338"
-                alt="Profile photo" />
+            <div class="hero-buttons">
+                <button class="btn-black">View Work</button>
+                <button class="btn-outline">Contact</button>
+            </div>
+
+            <article> 
+                <div class="text-subtitle">
+                 <h2>The Philosophy</h2>   
+                <p class="hero-subtitle">
+                I approach web developoment with the eye of an architect and the precison of a caftsman. My work is defined by stripping away the unnecessary to reveal the core esscense of a product.
+                Specializing in modern frameworks and high-fidelity interfaces, I bridge the gap between complex backend systems and sophisticated user experiences.
+                <img src="public/img/filosofia-webpng" alt="Photo"
+            </article>
+
+            
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
+            <h2 class="section-title">Projects</h2>
             <div class="project-list">
                 <article class="project-item">
+                    <a href="#">Pets</a>
                     <!-- Image with alt text for week 3 -->
-                    <img src="./public/img/photo-1514888286974-6c03e2ca1dba.jpeg" alt="Pet project" />
-                    <a href="/src/views/pets.html">Pets</a>
+                    <img src="./public/img/descarga.jpeg" alt="Pet project" />
                 </article>
+
                 <article class="project-item">
-                    <!-- Image with alt text for week 3 -->
-                    <img src="./public/img/descarga (1).jpeg" alt="Project on artificial intelligence" />
                     <a href="#">Project IA</a>
+                    <!-- Image with alt text for week 3 -->
+                    <img src="./public/img/project-ia.png" alt="Project on artificial intelligence" />
                 </article>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact-section">  
             <h2>Get in touch</h2>
-            <p>Interested in a collaboration or just want to say hi? Drop me a message below</p>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label> Name:</label>
+            <form id=" portfolio-form">
+                <div class="form-field">
+                    <label>Name</label>
                     <input type="text" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed"
                         placeholder="Your name" />
                 </div>
 
-                <div class="form-group">
-                    <label>Phone number:</label>
+                <div class="form-field">
+                    <label>Phone number</label>
                     <input type="tel" required pattern="[0-9]+" title="Only numbers allowed"
                         placeholder="Your number" />
                 </div>
 
-                <div class="form-group">
-                    <label> Email:</label>
-                    <input type="email" required placeholder="Your email" />
+                <div class="form-field">
+                    <label> Email address</label>
+                    <input type="email" placeholder="@emailexample.com" required/>
                 </div>
 
-                <button type="submit">Send message</button>
+                <button type="submit" class=" btn-black">Send Message</button>
             </form>
         </section>
     </main>
@@ -87,7 +101,7 @@
         <p>&copy; 2026 Jhon Wilson. All rights reserverd.</p>
     </footer>
 
-    <script src="/js/script.js"></script>
+    <script src="/src/JavaScript/script.js"></script>
 </body>
 
 </html>

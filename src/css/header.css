@@ -5,8 +5,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
+}
+.logo_container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 header nav ul {
     list-style: none;
     display: flex;
@@ -14,9 +19,14 @@ header nav ul {
     margin: 0;
     padding: 0;
 }
+.logo-area {
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 800;
+}
 
 header nav a {
-    color: white;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
@@ -24,4 +34,14 @@ header nav a {
 
 header nav a:hover {
     color: var(--accent-color);
+}
+.main-header {
+    padding: 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.main-header img {
+    width: 3rem;
 }
