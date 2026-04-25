@@ -1,107 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio" />
+    <title>Portfolio Personal | John Wilson</title>
+    <link rel="stylesheet" href="/src/css/style.css" />
+    
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio">
-    <link rel="stylesheet" href="./src/css/main.css">
-    <link rel="stylesheet" href="./src/css/header.css">
-    <link rel="stylesheet" href="./src/css/layout.css">
-    <link rel="stylesheet" href="./src/css/components.css">
-    <title>Portfolio Personal | Jhon Wilson</title>
-    <link rel="stylesheet" href="/src/css/style.css">
-</head>
-
-<body>
+  <body>
     <header class="main-header">
-        <div class="logo_container">
-         <img src="https://i.scdn.co/image/ab6761610000e5ebe42e3a0f2d453258f99b2338" alt="Profile photo" />
+      <div class="logo_container">
+        <img
+          src="https://i.scdn.co/image/ab6761610000e5ebe42e3a0f2d453258f99b2338"
+          alt="Profile photo"
+        />
         <div class="logo-area">John Wilson</div>
-        </div>
-       
-        <nav id="menu" class="hidden">
-            <ul>
-                <li><a href="#about">About </a></li>
-                <li><a href="#projects">Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="./src/views/pets.html">Pets</a></li>
-            </ul>
-        </nav>
+      </div>
+      <nav id="menu" aria-label="Main navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/src/views/pets.html">Pets</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section id="about" class="hero-section">
-            <div class="text-title">
-            <h1 class="hero-title">John Wilson</h1>
-            <p class="hero-subtitle">
-            Architenting high-performance digital experiences through minimalist design and precise engineering</p>
-            </div>
-            <!-- Image with alt text for week 3 -->
-            <div class="hero-buttons">
-                <button class="btn-black">View Work</button>
-                <button class="btn-outline">Contact</button>
-            </div>
+      <section id="about" class="hero-section">
+        <div class="text-title">
+          <h1 class="hero-title">John Wilson</h1>
+          <p class="hero-subtitle">
+            Architecting high-performance digital experiences through minimalist
+            design and precise engineering
+          </p>
+        </div>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-black">View Work</a>
+          <a href="#contact" class="btn-outline">Contact</a>
+        </div>
+      </section>
 
-            <article> 
-                <div class="text-subtitle">
-                 <h2>The Philosophy</h2>   
-                <p class="hero-subtitle">
-                I approach web developoment with the eye of an architect and the precison of a caftsman. My work is defined by stripping away the unnecessary to reveal the core esscense of a product.
-                Specializing in modern frameworks and high-fidelity interfaces, I bridge the gap between complex backend systems and sophisticated user experiences.
-                <img src="public/img/filosofia-webpng" alt="Photo"
-            </article>
+      <div class="philosophy-layout">
+        <img
+          src="public/img/a_modern_professional_illustration_representing_a_personal_philosophy_of.png"
+          alt="Illustration representing John Wilson's design philosophy"
+        />
+        <div class="text-subtitle">
+          <h2>The Philosophy</h2>
+          <p class="hero-subtitle">
+            I approach web development with the eye of an architect and the
+            precision of a craftsman. My work is defined by stripping away the
+            unnecessary to reveal the core essence of a product. Specializing
+            in modern frameworks and high-fidelity interfaces, I bridge the
+            gap between complex backend systems and sophisticated user
+            experiences.
+          </p>
+        </div>
+      </div>
 
-            
-        </section>
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="project-list">
+          <article class="project-item">
+            <img src="./public/img/photo-1514888286974-6c03e2ca1dba.jpeg" alt="Pet project" />
+            <h3>Pets</h3>
+            <p class="project-description">
+              A pet adoption website built with React, featuring a user-friendly
+              interface and a backend API for managing pet listings and
+              applications.
+            </p>
+          </article>
+          <article class="project-item">
+            <img
+              src="./public/img/project-ia.png"
+              alt="Project on artificial intelligence"
+            />
+            <h3>Project IA</h3>
+            <p class="project-description">
+              An AI-powered chatbot designed to assist users with customer
+              support inquiries, built using natural language processing and
+              machine learning techniques.
+            </p>
+          </article>
+        </div>
+      </section>
 
-        <section id="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="project-list">
-                <article class="project-item">
-                    <a href="#">Pets</a>
-                    <!-- Image with alt text for week 3 -->
-                    <img src="./public/img/descarga.jpeg" alt="Pet project" />
-                </article>
-
-                <article class="project-item">
-                    <a href="#">Project IA</a>
-                    <!-- Image with alt text for week 3 -->
-                    <img src="./public/img/project-ia.png" alt="Project on artificial intelligence" />
-                </article>
-            </div>
-        </section>
-
-        <section id="contact" class="contact-section">  
-            <h2>Get in touch</h2>
-            <form id=" portfolio-form">
-                <div class="form-field">
-                    <label>Name</label>
-                    <input type="text" required pattern="[A-Za-z\s]+" title="Only letters and spaces are allowed"
-                        placeholder="Your name" />
-                </div>
-
-                <div class="form-field">
-                    <label>Phone number</label>
-                    <input type="tel" required pattern="[0-9]+" title="Only numbers allowed"
-                        placeholder="Your number" />
-                </div>
-
-                <div class="form-field">
-                    <label> Email address</label>
-                    <input type="email" placeholder="@emailexample.com" required/>
-                </div>
-
-                <button type="submit" class=" btn-black">Send Message</button>
-            </form>
-        </section>
+      <section id="contact" class="contact-section">
+        <h2>Get in touch</h2>
+        <form id="portfolio-form">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input
+              id="name"
+              type="text"
+              required
+              pattern="[A-Za-z\s]+"
+              title="Only letters and spaces are allowed"
+              placeholder="Your name"
+            />
+          </div>
+          <div class="form-field">
+            <label for="phone">Phone number</label>
+            <input
+              id="phone"
+              type="tel"
+              required
+              pattern="[0-9]+"
+              title="Only numbers allowed"
+              placeholder="Your number"
+            />
+          </div>
+          <div class="form-field">
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="@emailexample.com"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-black">Send Message</button>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Jhon Wilson. All rights reserverd.</p>
+      <p>&copy; 2026 John Wilson. All rights reserved.</p>
     </footer>
 
-    <script src="/src/JavaScript/script.js"></script>
-</body>
-
+    <script src="./src/JavaScript/script.js"></script>
+  </body>
 </html>

@@ -1,20 +1,36 @@
-# Portafolio Profesional - John Wilson
+# My Pets - Portfolio Module
 
-Proyecto desarrollado para las **Semanas 1, 2 y 3** del curso de Desarrollo Web.
+This project is a specialized module for my personal portfolio, focusing on a clean, architectural aesthetic inspired by the **Stitch** design system. 
 
-## Características Principales
-- **Estructura Semántica:** Uso de etiquetas `header`, `main`, `section` y `footer`.
-- **Diseño Responsivo:** Implementación de **Media Queries** para asegurar que la web se vea bien en móviles, tablets y escritorio.
-- **Layout Moderno:** Uso de **CSS Grid** para la galería de proyectos y **Flexbox** para la navegación.
-- **Interactividad:** Uso de JavaScript para manipular el DOM y validar formularios.
+## 🚀 Features
+- **Architectural Layout:** Minimalist design with high-contrast typography.
+- **Dynamic Interaction:** Grayscale-to-color hover effects on images.
+- **Responsive Design:** Fully optimized for mobile and desktop using CSS Flexbox.
+- **Clean Structure:** Semantic HTML5 and modular CSS architecture.
 
-## Tecnologías
-- HTML5
-- CSS3 (Variables, Grid, Flexbox)
-- JavaScript (ES6)
+## 🛠️ Tech Stack
+- **HTML5:** Semantic structure.
+- **CSS3:** Custom properties (variables), Flexbox, and transitions.
+- **Typography:** Inter Font Family (via Google Fonts).
 
-## Estructura de Archivos
-- `index.html`: Página principal.
-- `mascotas.html`: Galería de mascotas.
-- `src/css/`: Carpeta con archivos de estilos (main, layout, components).
-- `script.js`: Lógica de interactividad.
+## 📂 Project Structure
+PORTFOLIO-PROJECT-WEB/
+├── public/
+│   └── img/                 # Image assets (JPG, PNG, SVG)
+├── src/
+│   ├── css/                 # Modular stylesheet architecture
+│   │   ├── components.css   # UI reusable components
+│   │   ├── header.css       # Navigation and header styles
+│   │   ├── layout.css       # Global grid and positioning
+│   │   ├── main.css         # Index/Home page specific styles
+│   │   ├── pets.css         # Pets module architectural styling
+│   │   └── style.css        # Main CSS index (imports all modules)
+│   ├── JavaScript/
+│   │   └── script.js        # DOM logic and menu interactions
+│   └── views/
+│       └── pets.html        # Pets gallery view
+├── index.html               # Main landing page
+├── license.md               # MIT License legal text
+└── README.md                # Project documentation
+## ⚖️ License
+This project is under the **MIT License**.

@@ -1,0 +1,7 @@
+/* Moduls importants */
+@import '/src/css/components.css';
+@import '/src/css/layout.css';
+@import '/src/css/header.css';
+@import '/src/css/main.css';
+@import '/src/css/pets.css';
+/*Specific styles for the homepage */
